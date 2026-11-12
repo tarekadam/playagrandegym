@@ -1,9 +1,9 @@
 /* Playa Grande Gym — jungle palette */
 :root {
   --jungle-900: #1b2c1b;   /* deepest canopy: hero, footer */
-  --jungle-700: #2f4a2c;   /* forest green: buttons, featured card */
+  --jungle-700: #2f4a2c;   /* forest green: buttons, headings */
   --jungle-500: #4a6b3f;   /* leaf green: accents */
-  --sage: #dde3cd;         /* soft highlight */
+  --sage: #dde3cd;         /* soft highlight, service cards */
   --gold: #e3c378;         /* sunset gold, from the logo */
   --cream: #f3eee4;        /* page background */
   --paper: #fbf8f2;        /* cards */
@@ -79,13 +79,10 @@ p { margin: 0; }
 }
 @media (min-width: 720px) { .options { grid-template-columns: 1fr 1fr; } }
 .option {
-  background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  background: var(--sage); border: 1px solid var(--sage); border-radius: 16px; padding: 24px;
 }
-.option h2 { font-size: 23px; color: var(--jungle-700); }
-.option p { color: var(--muted); }
-.option--featured { background: var(--jungle-700); border-color: var(--jungle-700); color: var(--cream); }
-.option--featured h2 { color: var(--gold); }
-.option--featured p { color: rgba(243, 238, 228, .85); }
+.option h2 { font-size: 23px; color: var(--jungle-900); }
+.option p { color: #3f4a38; }
 
 /* contact */
 .contact { padding: 56px 0; }
