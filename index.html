@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
   <!-- bump ?v= whenever style.css changes, so browsers and the CDN fetch the new file -->
-  <link rel="stylesheet" href="assets/style.css?v=2026-11-12g">
+  <link rel="stylesheet" href="assets/style.css?v=2026-11-12h">
 </head>
 <body>
 
@@ -57,6 +57,40 @@
     </article>
   </section>
 
+  <section class="week" id="schedule">
+    <h2>Our Training Week</h2>
+    <p class="week-lead">Strength training, open gym and personal training. Choose the times that work for you.</p>
+
+    <div class="week-grid">
+      <article class="day">
+        <h3 class="day-name">Mon · Wed · Fri</h3>
+        <ul class="day-slots">
+          <li class="slot slot--open"><b>Open Gym</b><span>7:00 – 8:30 am</span></li>
+          <li class="slot slot--club"><b>Women's Strength Club</b><span>8:30 – 9:15 am · 6 spaces</span></li>
+          <li class="slot slot--club"><b>Women's Strength Club</b><span>9:30 – 10:15 am · 6 spaces</span></li>
+          <li class="slot slot--club"><b>Women's Strength Club</b><span>10:30 – 11:15 am · 6 spaces</span></li>
+          <li class="slot slot--open"><b>Open Gym</b><span>11:30 am – 1:00 pm</span></li>
+        </ul>
+      </article>
+      <article class="day">
+        <h3 class="day-name">Tue · Thu</h3>
+        <div class="slot slot--open slot--wide"><b>Open Gym</b><span>Reserve your training time: morning, midday or afternoon.</span></div>
+      </article>
+      <article class="day">
+        <h3 class="day-name">Sat · Sun</h3>
+        <div class="slot slot--open slot--wide"><b>Open Gym</b><span>Available by reservation.</span></div>
+      </article>
+    </div>
+
+    <ul class="perks">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 13.6c2.6.3 4.5 2.3 4.5 5.4"/></svg>Small groups (max 6)</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>Regular training times</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 10v4M5.5 7v10M18.5 7v10M21.5 10v4M5.5 12h13"/></svg>Strength-focused training</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19.5C5 11 10 6 20 4.5 19 14 14 19 5.5 19.5"/><path d="M5 19.5l8.5-8.5"/></svg>Flexible open gym access</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/></svg>Personal training available</li>
+    </ul>
+  </section>
+
 </main>
 
 <section class="band band--contact contact">
@@ -64,14 +98,8 @@
     <img class="band-art" src="assets/lifter.webp" alt="" width="500" height="417">
     <h2>Come Train with Us</h2>
     <div class="band-body">
-      <h3>Group schedule <span class="tag">Women only</span></h3>
-      <ul class="slots">
-        <li><span class="time">8:30 – 9:15 am</span><span class="spaces">6 spaces</span></li>
-        <li><span class="time">9:30 – 10:15 am</span><span class="spaces">6 spaces</span></li>
-        <li><span class="time">10:30 – 11:15 am</span><span class="spaces">6 spaces</span></li>
-      </ul>
-
       <h3>Book on WhatsApp</h3>
+      <p class="cta-lead">Message us to reserve your spot.</p>
       <!-- touch devices get a tap-to-chat button; desktops just see the number -->
       <a class="wa-btn" href="https://wa.me/12504128294">WhatsApp +1 250 412 8294</a>
       <p class="wa-num">WhatsApp <strong>+1 250 412 8294</strong></p>
