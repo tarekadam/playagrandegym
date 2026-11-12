@@ -1,66 +1,73 @@
-/* Playa Grande Gym — palette from the Women's Strength Club logo */
+/* Playa Grande Gym — jungle palette */
 :root {
-  --plum: #2e1a33;
-  --plum-dark: #22121f;
-  --magenta: #c42f6c;
-  --amber: #fbbf3c;
-  --cream: #fff7ee;
-  --muted: #6d5a68;
-  --line: #ecd9cb;
-  --sunset: linear-gradient(180deg, #f6a33c 0%, #f17a43 40%, #e0517a 75%, #a8235a 100%);
-  --display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  --jungle-900: #1b2c1b;   /* deepest canopy: hero, footer */
+  --jungle-700: #2f4a2c;   /* forest green: buttons, featured card */
+  --jungle-500: #4a6b3f;   /* leaf green: accents */
+  --sage: #dde3cd;         /* soft highlight */
+  --cream: #f3eee4;        /* page background */
+  --paper: #fbf8f2;        /* cards */
+  --ink: #1e2a1c;          /* text */
+  --muted: #56604f;        /* secondary text */
+  --line: #d9d3c4;         /* borders */
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Mulish", system-ui, -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; }
 body {
   margin: 0;
   background: var(--cream);
-  color: var(--plum);
-  font: 400 17px/1.6 "DM Sans", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  font: 400 17px/1.6 var(--sans);
 }
-h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.1; margin: 0 0 .4em; }
+h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 1.1; margin: 0 0 .4em; letter-spacing: -.01em; }
 p { margin: 0; }
 
 .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
 
 /* hero */
 .hero {
-  background: var(--sunset);
-  color: #fff;
+  /* green wash over the photo keeps text readable and the image on-palette */
+  background:
+    linear-gradient(180deg, rgba(27, 44, 27, .55) 0%, rgba(27, 44, 27, .7) 60%, rgba(27, 44, 27, .9) 100%),
+    url("hero.jpg") center 60% / cover no-repeat,
+    var(--jungle-900);
+  color: var(--cream);
   text-align: center;
-  padding: 56px 16px 64px;
+  padding: 72px 16px 88px;
 }
 .logo {
-  width: 180px; height: 180px; margin: 0 auto 24px; display: block;
+  width: 160px; height: 160px; margin: 0 auto 24px; display: block;
   border-radius: 50%; object-fit: cover; background: #fff;
-  box-shadow: 0 20px 40px -18px rgba(46, 26, 51, .6), 0 0 0 8px rgba(255, 255, 255, .25);
+  box-shadow: 0 20px 40px -18px rgba(0, 0, 0, .6), 0 0 0 6px rgba(243, 238, 228, .15);
 }
-.hero h1 { font-size: clamp(36px, 7vw, 64px); }
-.hero p { font-size: 19px; max-width: 560px; margin: 0 auto; }
-.hero .kit { margin-top: 18px; font-size: 14px; font-weight: 700; letter-spacing: .04em; opacity: .9; }
+.hero h1 { font-size: clamp(38px, 7vw, 66px); }
+.hero p { font-size: 19px; max-width: 560px; margin: 0 auto; color: rgba(243, 238, 228, .9); }
+.hero .kit { margin-top: 18px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--sage); }
 
 /* options */
 .options {
   display: grid; gap: 16px;
-  margin: -32px 0 0;
+  margin: -36px 0 0;
 }
 @media (min-width: 720px) { .options { grid-template-columns: 1fr 1fr; } }
 .option {
-  background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
 }
-.option h2 { font-size: 21px; }
+.option h2 { font-size: 23px; color: var(--jungle-700); }
 .option p { color: var(--muted); }
-.option--featured { background: var(--plum); border-color: var(--plum); color: #fff; }
-.option--featured h2 { color: var(--amber); }
-.option--featured p { color: rgba(255, 255, 255, .85); }
+.option--featured { background: var(--jungle-700); border-color: var(--jungle-700); color: var(--cream); }
+.option--featured h2 { color: var(--cream); }
+.option--featured p { color: rgba(243, 238, 228, .85); }
 
 /* contact */
 .contact { padding: 56px 0; }
-.contact h2 { font-size: 28px; }
+.contact h2 { font-size: 32px; color: var(--jungle-700); }
 .contact dl { display: grid; grid-template-columns: 110px 1fr; gap: 10px 16px; margin: 20px 0 0; }
 .contact dt { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding-top: 3px; }
 .contact dd { margin: 0; }
-.contact a { color: var(--magenta); font-weight: 700; }
+.contact a { color: var(--jungle-500); font-weight: 700; }
 
 /* missing-content marker: visible until the real value is filled in */
 .todo {
@@ -69,6 +76,6 @@ p { margin: 0; }
 }
 
 footer {
-  background: var(--plum-dark); color: rgba(255, 255, 255, .6);
+  background: var(--jungle-900); color: rgba(243, 238, 228, .6);
   text-align: center; font-size: 14px; padding: 24px 16px;
 }
