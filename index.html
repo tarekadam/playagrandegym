@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
   <!-- bump ?v= whenever style.css changes, so browsers and the CDN fetch the new file -->
-  <link rel="stylesheet" href="assets/style.css?v=2026-11-12c">
+  <link rel="stylesheet" href="assets/style.css?v=2026-11-12d">
 </head>
 <body>
 
@@ -75,6 +75,31 @@
 </main>
 
 <footer>© 2026 The Playa Grande Gym · Pura vida.</footer>
+
+<script>
+  // Equipment list: drop the "·" after the last item on each wrapped line.
+  // Without JS every item keeps its dot, which is still readable.
+  (function () {
+    var kit = document.querySelector('.hero .kit');
+    if (!kit) return;
+    var items = [].slice.call(kit.querySelectorAll('span'));
+    function mark() {
+      // repeat until stable: hiding a dot can let the next item move up a line
+      for (var pass = 0; pass < 4; pass++) {
+        var changed = false;
+        for (var i = 0; i < items.length - 1; i++) {
+          var eol = items[i + 1].offsetTop > items[i].offsetTop;
+          if (eol !== items[i].classList.contains('eol')) { items[i].classList.toggle('eol', eol); changed = true; }
+        }
+        if (!changed) break;
+      }
+    }
+    mark();
+    if (document.fonts) document.fonts.ready.then(mark);
+    if (window.ResizeObserver) new ResizeObserver(mark).observe(kit);
+    else window.addEventListener('resize', mark);
+  })();
+</script>
 
 </body>
 </html>
